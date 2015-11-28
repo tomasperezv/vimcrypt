@@ -64,6 +64,10 @@ The following script[2] by Wouter Hanegraaff provides transparent editing of GPG
     autocmd BufWritePost,FileWritePost *.gpg u
   ```
 
+### Demo of Symmetric encryption with GPG + Vim
+
+![terminal demo](./terminal.gif)
+
 ### Reference
 
 [1] https://dgl.cx/2014/10/vim-blowfish  
