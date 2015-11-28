@@ -51,7 +51,7 @@ The following script[2] by Wouter Hanegraaff provides transparent editing of GPG
 3. FileReadPost: switch to normal mode for editing
 
   ```vimscript
-    autocmd BufReadPost,FileReadPost *.gpg '[,']!gpg --decrypt 2> /dev/null
+    autocmd BufReadPost,FileReadPost *.gpg '[,']!gpg --decrypt --no-use-agent 2> /dev/null
     autocmd BufReadPost,FileReadPost *.gpg set nobin
     autocmd BufReadPost,FileReadPost *.gpg let &ch = ch_save|unlet ch_save
     autocmd BufReadPost,FileReadPost *.gpg execute ":doautocmd BufReadPost " . expand("%:r")
@@ -60,7 +60,7 @@ The following script[2] by Wouter Hanegraaff provides transparent editing of GPG
 4. FileWritePre: encrypt text before writing
 
   ```vimscript
-    autocmd BufWritePre,FileWritePre *.gpg '[,']!gpg --default-recipient-self -ae 2>/dev/null
+    autocmd BufWritePre,FileWritePre *.gpg '[,']!gpg --armor --symmetric --no-use-agent --yes --cipher-algo AES256 2>/dev/null
     autocmd BufWritePost,FileWritePost *.gpg u
   ```
 
