@@ -66,5 +66,5 @@ The following script[2] by Wouter Hanegraaff provides transparent editing of GPG
 
 ### Reference
 
-[1] https://dgl.cx/2014/10/vim-blowfish
-[2] http://vim.wikia.com/wiki/Encryption
+[1] https://dgl.cx/2014/10/vim-blowfish  
+[2] http://vim.wikia.com/wiki/Encryption  
